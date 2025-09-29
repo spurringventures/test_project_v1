@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Basic CI
 
 on:
   push:
@@ -12,12 +12,4 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Use Node.js v16
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      
-      - run: npm install
-      
-      - run: npm test
+      - run: echo "Repo is empty, but CI/CD workflow is running!"
